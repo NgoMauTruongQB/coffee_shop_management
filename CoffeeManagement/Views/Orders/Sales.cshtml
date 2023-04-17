@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Product Maganement";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Content/assets/font/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/assets/css/admin.css">
+    <title>Doanh số</title>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="~/Content/assets/img/logo/logo.png" alt="Tori coffee">
+                Tori Coffee
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ti-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Content("~/UserAccount/getAll")">
+                            <i class="ti-angle-double-right"></i> Tài khoản
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Content("~/Product/getAll")">
+                            <i class="ti-angle-double-right"></i>
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <i class="ti-angle-double-right"></i> Doanh số
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Content("~/Home/Index")">
+                            <i class="ti-angle-double-right"></i>
+                            Đăng xuất
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content row no-gutters">
+            <h2 class="text-center fw-bold"> Thống kê doanh số</h2>
+            <div class="row">
+                <div class="col list-inline">
+                    <ul class="col">
+                        <li class="fw-bold text-center pt-1 pb-2"> Ngày </li>
+                        @foreach (var i in ViewBag.listDate)
+                        {
+                            <li class="text-center pt-1 pb-1">@i</li>
+                        }
+                    </ul>
+                </div>
+                <div class="col list-inline">
+                    <ul class="col">
+                        <li class="fw-bold text-center pt-1 pb-2">Doanh số </li>
+                        @foreach (var item in ViewBag.listCost)
+                        {
+                            <li class="text-center pt-1 pb-1">@item</li>
+
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

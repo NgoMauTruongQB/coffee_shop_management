@@ -1,0 +1,46 @@
+﻿
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --my-color-1: #002947;
+    --my-color-2: #FD9415;
+    --my-color-3: #C80000;
+    --my-color-4: #024b80;
+}
+
+.card {
+    border: #002947 solid 1px;
+    border-radius: 8px;
+}
+
+
+.card-header {
+    background-color: var(--my-color-1);
+    color: #FFF;
+}
+
+    .card-header img {
+        border-radius: 8px;
+        height: 60px;
+        margin-bottom: 6px;
+    }
+
+    .card-header h3 {
+        display: inline;
+        font-weight: 900;
+        padding-left: 10px;
+    }
+
+.card-body .btn:active {
+    background-color: #FFF;
+    color: var(--my-color-1);
+}
+
+.card-body .btn {
+    background-color: var(--my-color-1);
+    color: #FFF;
+    width: 100%;
+    border: 1px solid var(--my-color-1);
+}
